@@ -177,7 +177,7 @@ class OAuth2BasicAuthenticator < ::Auth::OAuth2Authenticator
 
     download_avatar(result.user, avatar_url)
     
-    group = Group.find_by(id: __group id__)
+    group = Group.find_by(id: turbo)
     group.add(result.user)
 
     result.extra_data = { oauth2_basic_user_id: user_details[:user_id], avatar_url: avatar_url }
